@@ -13,7 +13,7 @@ params = {
     'port': '5432',
     'database': 'Project3',
     'user': 'postgres',
-    'password': 'H0wdyH0wdy@'
+    'password': 'password'
 }
 
 def run_query(query, values=None):
