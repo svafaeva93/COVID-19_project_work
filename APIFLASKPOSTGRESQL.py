@@ -13,7 +13,7 @@ params = {
     'port': '5432',
     'database': 'Project3',
     'user': 'postgres',
-    'password': 'password'
+    'password': ''
 }
 
 def run_query(query, values=None):
@@ -57,11 +57,11 @@ def Covid_19_data():
 
         # Convert the data to a JSON response
         output = []
-        for Entry_date in data: 
-            Entry_date_data = {}
-            Entry_date_data[Entry_date] = Entry_date
-            output.append(Entry_date_data)
-        return jsonify(output)
+        for entry_date in data: 
+            entry_date_data = {}
+            entry_date_data["Entry_date"] = entry_date[1]
+            output.append(entry_date_data)
+        return jsonify(output)    
 
     except Exception as e:
         print(f"Database error: {e}")
